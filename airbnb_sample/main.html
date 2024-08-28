@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 스타일 지정 전 초기화 필수 */
+        * {
+            margin: 0;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        header{
+            height: 880px;
+            background-image: url("/images/background.jpg");
+        }
+
+        nav{
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        .logo{
+            color: white;
+            font-size: 35px;
+            font-weight: 800;
+        }
+
+        .menu{
+            display: flex;
+        }
+
+        .menu > div {
+            margin-right: 30px;
+            color: white;
+            font-weight: 800;
+            cursor: pointer;
+        }
+
+        .form__search {
+            border: 1px solid red;
+            position: relative;
+            top: 10px;
+            left: 50px;
+            border-radius: 6px;
+            width: 430px;
+            background-color: white;
+            padding: 20px 30px;
+            box-shadow: 0 4px 4px 0 rgb(214, 214, 214);
+        }
+        .table{
+            width: 100%;
+        }
+
+        .title__search{
+            
+            font-size: 30px;
+            font-weight: 800;
+            padding: 10px 0;
+            color: rgb(75, 75, 75);
+        }
+
+        .sub__title__search{
+            
+            font-size: 12px;
+            font-weight: 600;
+            padding: 10px 0;
+        }
+
+        .input__search{
+            height: 45px;
+            width: 100%;
+            color: rgb(100, 100, 100);
+            font-size: 15px;
+            border: 1px solid rgb(230, 230, 230);
+        }
+
+        .button__box {
+            
+            height: 60px;
+            display: flex;
+            justify-content: end; /*가로 배치*/
+            align-items: center; /* height 를 줘서 높이를 줘야 세로 배치가능*/
+        }
+
+        .button__search{
+            background-color: #FF5A5F;
+            color: white;
+            width: 70px;
+            height: 45px;
+            font-size: 15px;
+            font-weight: 700;;
+            border-radius: 6px;
+            border: 0px;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo"><svg viewBox="0 0 1000 1000" role="presentation" aria-hidden="true" focusable="false"
+                style="height: 1em; width: 1em; display: inline-block; fill: currentcolor;">
+                <path
+                    d="m499.3 736.7c-51-64-81-120.1-91-168.1-10-39-6-70 11-93 18-27 45-40 80-40s62 13 80 40c17 23 21 54 11 93-11 49-41 105-91 168.1zm362.2 43c-7 47-39 86-83 105-85 37-169.1-22-241.1-102 119.1-149.1 141.1-265.1 90-340.2-30-43-73-64-128.1-64-111 0-172.1 94-148.1 203.1 14 59 51 126.1 110 201.1-37 41-72 70-103 88-24 13-47 21-69 23-101 15-180.1-83-144.1-184.1 5-13 15-37 32-74l1-2c55-120.1 122.1-256.1 199.1-407.2l2-5 22-42c17-31 24-45 51-62 13-8 29-12 47-12 36 0 64 21 76 38 6 9 13 21 22 36l21 41 3 6c77 151.1 144.1 287.1 199.1 407.2l1 1 20 46 12 29c9.2 23.1 11.2 46.1 8.2 70.1zm46-90.1c-7-22-19-48-34-79v-1c-71-151.1-137.1-287.1-200.1-409.2l-4-6c-45-92-77-147.1-170.1-147.1-92 0-131.1 64-171.1 147.1l-3 6c-63 122.1-129.1 258.1-200.1 409.2v2l-21 46c-8 19-12 29-13 32-51 140.1 54 263.1 181.1 263.1 1 0 5 0 10-1h14c66-8 134.1-50 203.1-125.1 69 75 137.1 117.1 203.1 125.1h14c5 1 9 1 10 1 127.1.1 232.1-123 181.1-263.1z">
+                </path>
+            </svg></div>
+            <div class="menu">
+                <div>호스트가 되어보세요</div>
+                <div>도움말</div>
+                <div>회원가입</div>
+                <div>로그인</div>
+            </div>
+        </nav>
+        <section>
+            <div class="form__search">
+                <div class="title__search">특색 있는 숙소와 즐길 거리를 예약하세요.</div>
+                <table>
+                    <tr>
+                        <td colspan="2" class="sub__title__search">목적지</td>
+                        
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <input class="input__search" type="text" placeholder="모든 위치">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="sub__title__search">체크인</td>
+                        <td class="sub__title__search">체크아웃</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="date" class="input__search">
+                        </td>
+                        <td>
+                            <input type="date" class="input__search">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="sub__title__search">인원</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <select class="input__search">
+                                <option>인원</option>
+                                <option>1</option>
+                                <option>2</option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+                <div class="button__box">
+                    <button class="button__search">검색</button>
+                </div>
+            </div>
+        </section>
+    </header>
+</body>
+</html>
